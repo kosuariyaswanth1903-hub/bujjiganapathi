@@ -77,10 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "Bujji Ganapathi Youth · Bhimadole — Ganesh Chaturthi 2026" },
+      { property: "og:title", content: "Bujji Ganapathi Youth · Bhimadole — Ganesh Chaturthi 2026" },
+      { name: "twitter:title", content: "Bujji Ganapathi Youth · Bhimadole — Ganesh Chaturthi 2026" },
+      { name: "description", content: "Join Bujji Ganapathi Youth, Bhimadole for a divine Ganesh Chaturthi 2026 celebration. Grand aarti, darshan, prasadam, cultural programs and community devotion." },
+      { property: "og:description", content: "Join Bujji Ganapathi Youth, Bhimadole for a divine Ganesh Chaturthi 2026 celebration. Grand aarti, darshan, prasadam, cultural programs and community devotion." },
+      { name: "twitter:description", content: "Join Bujji Ganapathi Youth, Bhimadole for a divine Ganesh Chaturthi 2026 celebration. Grand aarti, darshan, prasadam, cultural programs and community devotion." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/2552be34-ac25-4957-af4f-db2ca9e05b2a" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/2552be34-ac25-4957-af4f-db2ca9e05b2a" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

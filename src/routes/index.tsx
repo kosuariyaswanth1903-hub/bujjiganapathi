@@ -23,8 +23,8 @@ export const Route = createFileRoute("/")({
         content:
           "Join Bujji Ganapathi Youth, Bhimadole for a divine Ganesh Chaturthi 2026 celebration. Grand aarti, darshan, prasadam, cultural programs and community devotion.",
       },
-      { property: "og:title", content: "Bujji Ganapathi Youth · Bhimadole" },
-      { property: "og:description", content: "Come with faith. Leave with blessings. Ganesh Chaturthi 2026." },
+      { property: "og:title", content: "Bujji Ganapathi Youth · Bhimadole — Ganesh Chaturthi 2026" },
+      { property: "og:description", content: "Join Bujji Ganapathi Youth, Bhimadole for a divine Ganesh Chaturthi 2026 celebration. Grand aarti, darshan, prasadam, cultural programs and community devotion." },
       { property: "og:type", content: "website" },
       { property: "og:image", content: logoAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
