@@ -471,14 +471,15 @@ function Timeline() {
 
 function Gallery() {
   const imgs = [
-    { src: heroImg, alt: "Ganesha idol close-up", h: "row-span-2" },
-    { src: galleryPandal, alt: "Decorated pandal at night", h: "" },
-    { src: galleryAarti, alt: "Maha aarti ceremony", h: "row-span-2" },
-    { src: galleryDiya, alt: "Diya with petals", h: "" },
+    { src: bujji2.url, alt: "Bujji Ganapathi idol garlanded with roses and marigold", h: "row-span-2" },
+    { src: bujji1.url, alt: "Ganapathi procession chariot under festive streamers", h: "" },
+    { src: bujji3.url, alt: "Evening mandap with lamps and naivedyam offerings", h: "row-span-2" },
+    { src: bujji4.url, alt: "Blessing hand of the Ganapathi idol", h: "" },
     { src: HERO_PROCESSION, alt: "Bujji Ganapathi procession tractor", h: "" },
-    { src: galleryBhajan, alt: "Bhajan performance", h: "row-span-2" },
-    { src: galleryVisarjan, alt: "Visarjan procession", h: "" },
+    { src: bujji5.url, alt: "Decorated chariot with flower canopy during procession", h: "row-span-2" },
+    { src: bujji6.url, alt: "Illuminated pandal stage during the celebrations", h: "" },
   ];
+
   const [active, setActive] = useState<number | null>(null);
   return (
     <Section id="gallery" eyebrow="Gallery" title="Moments of Devotion" subtitle="Cinematic memories from our celebrations — click to enlarge.">
