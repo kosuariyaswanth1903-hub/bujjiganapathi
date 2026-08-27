@@ -8,11 +8,13 @@ import {
 import logoAsset from "@/assets/logo.webp.asset.json";
 import processionAsset from "@/assets/procession.jpg.asset.json";
 import heroImg from "@/assets/hero-ganesh.jpg";
-import galleryAarti from "@/assets/gallery-aarti.jpg";
-import galleryPandal from "@/assets/gallery-pandal.jpg";
-import galleryDiya from "@/assets/gallery-diya.jpg";
-import galleryVisarjan from "@/assets/gallery-visarjan.jpg";
-import galleryBhajan from "@/assets/gallery-bhajan.jpg";
+import bujji1 from "@/assets/bujji-1.png.asset.json";
+import bujji2 from "@/assets/bujji-2.png.asset.json";
+import bujji3 from "@/assets/bujji-3.png.asset.json";
+import bujji4 from "@/assets/bujji-4.png.asset.json";
+import bujji5 from "@/assets/bujji-5.png.asset.json";
+import bujji6 from "@/assets/bujji-6.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -471,14 +473,15 @@ function Timeline() {
 
 function Gallery() {
   const imgs = [
-    { src: heroImg, alt: "Ganesha idol close-up", h: "row-span-2" },
-    { src: galleryPandal, alt: "Decorated pandal at night", h: "" },
-    { src: galleryAarti, alt: "Maha aarti ceremony", h: "row-span-2" },
-    { src: galleryDiya, alt: "Diya with petals", h: "" },
+    { src: bujji2.url, alt: "Bujji Ganapathi idol garlanded with roses and marigold", h: "row-span-2" },
+    { src: bujji1.url, alt: "Ganapathi procession chariot under festive streamers", h: "" },
+    { src: bujji3.url, alt: "Evening mandap with lamps and naivedyam offerings", h: "row-span-2" },
+    { src: bujji4.url, alt: "Blessing hand of the Ganapathi idol", h: "" },
     { src: HERO_PROCESSION, alt: "Bujji Ganapathi procession tractor", h: "" },
-    { src: galleryBhajan, alt: "Bhajan performance", h: "row-span-2" },
-    { src: galleryVisarjan, alt: "Visarjan procession", h: "" },
+    { src: bujji5.url, alt: "Decorated chariot with flower canopy during procession", h: "row-span-2" },
+    { src: bujji6.url, alt: "Illuminated pandal stage during the celebrations", h: "" },
   ];
+
   const [active, setActive] = useState<number | null>(null);
   return (
     <Section id="gallery" eyebrow="Gallery" title="Moments of Devotion" subtitle="Cinematic memories from our celebrations — click to enlarge.">
