@@ -8,11 +8,13 @@ import {
 import logoAsset from "@/assets/logo.webp.asset.json";
 import processionAsset from "@/assets/procession.jpg.asset.json";
 import heroImg from "@/assets/hero-ganesh.jpg";
-import galleryAarti from "@/assets/gallery-aarti.jpg";
-import galleryPandal from "@/assets/gallery-pandal.jpg";
-import galleryDiya from "@/assets/gallery-diya.jpg";
-import galleryVisarjan from "@/assets/gallery-visarjan.jpg";
-import galleryBhajan from "@/assets/gallery-bhajan.jpg";
+import bujji1 from "@/assets/bujji-1.png.asset.json";
+import bujji2 from "@/assets/bujji-2.png.asset.json";
+import bujji3 from "@/assets/bujji-3.png.asset.json";
+import bujji4 from "@/assets/bujji-4.png.asset.json";
+import bujji5 from "@/assets/bujji-5.png.asset.json";
+import bujji6 from "@/assets/bujji-6.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
