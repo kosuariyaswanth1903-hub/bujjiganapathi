@@ -551,7 +551,7 @@ function Visit() {
         <div className="glass overflow-hidden rounded-3xl">
           <iframe
             title="Temple location"
-            src="https://www.google.com/maps?q=Bhimadole,%20Andhra%20Pradesh&output=embed"
+            src="https://www.google.com/maps?q=R758%2BVFJ%20Bhimadole%20Andhra%20Pradesh%20534425&output=embed"
             className="h-[360px] w-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -559,7 +559,7 @@ function Visit() {
         </div>
         <div className="space-y-4">
           {[
-            ["📍 Address", "Bujji Ganapathi Pandal, Main Bazaar Road, Bhimadole, West Godavari, Andhra Pradesh 534425"],
+            ["📍 Address", "R758+VFJ, Bhimadole, Andhra Pradesh 534425"],
             ["🚗 Landmark", "Opposite Bhimadole Bus Stand, near the central junction"],
             ["🅿️ Parking", "Free two-wheeler and car parking available adjacent to the pandal"],
             ["🕰️ Timings", "Darshan 6:00 AM – 10:30 PM · Maha Aarti at 7:30 PM daily"],
@@ -570,7 +570,7 @@ function Visit() {
             </div>
           ))}
           <a
-            href="https://www.google.com/maps/dir/?api=1&destination=Bhimadole"
+            href="https://www.google.com/maps/dir/?api=1&destination=R758%2BVFJ%20Bhimadole%20Andhra%20Pradesh%20534425"
             target="_blank" rel="noreferrer"
             className="btn-gold inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-4 font-semibold"
           >
