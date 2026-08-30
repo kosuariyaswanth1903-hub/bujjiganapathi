@@ -673,7 +673,7 @@ function Donation() {
 }
 
 function Team() {
-  const roles = ["President", "Vice President", "Secretary", "Treasurer", "Cultural Head", "Coordinator", "Coordinator", "Coordinator"];
+  const roles = ["Organiser", "Organiser", "Organiser", "Organiser", "Organiser", "Organiser", "Organiser", "Organiser"];
   return (
     <Section eyebrow="Meet Our Team" title="The Devoted Volunteers" subtitle="Our dedicated volunteers work together with devotion and unity to make this celebration memorable.">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
