@@ -14,6 +14,7 @@ import bujji3 from "@/assets/bujji-3.png.asset.json";
 import bujji4 from "@/assets/bujji-4.png.asset.json";
 import bujji5 from "@/assets/bujji-5.png.asset.json";
 import bujji6 from "@/assets/bujji-6.png.asset.json";
+import organiser1 from "@/assets/organiser-1.png.asset.json";
 import organiser3 from "@/assets/organiser-3.png.asset.json";
 
 
@@ -674,17 +675,24 @@ function Donation() {
 }
 
 function Team() {
-  const roles = ["Organiser", "Organiser", "Organiser", "Organiser", "Organiser", "Organiser", "Organiser", "Organiser"];
+  const members = [
+    { name: "Yaswanth", photo: organiser1.url },
+    { name: "", photo: null },
+    { name: "Bharath Sai", photo: organiser3.url },
+    { name: "", photo: null },
+    { name: "", photo: null },
+    { name: "", photo: null },
+    { name: "", photo: null },
+    { name: "", photo: null },
+  ];
   return (
     <Section eyebrow="Meet Our Team" title="Our Organisers" subtitle="Our dedicated organisers work together with devotion and unity to make this celebration memorable.">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {roles.map((r, i) => {
-          const name = i === 2 ? "Bharath Sai" : "";
-          return (
+        {members.map(({ name, photo }, i) => (
           <div key={i} className="glass group rounded-2xl p-6 text-center transition hover:-translate-y-1">
             <div className="relative mx-auto grid h-24 w-24 place-items-center overflow-hidden rounded-full ring-2 ring-[color:var(--gold)]/40" style={{ background: "var(--gradient-royal)" }}>
-              {i === 2 ? (
-                <img src={organiser3.url} alt="Bharath Sai" className="h-24 w-24 rounded-full object-cover object-top" />
+              {photo ? (
+                <img src={photo} alt={name || "Organiser"} className="h-24 w-24 rounded-full object-cover object-top" />
               ) : (
                 <img src={LOGO} alt="" className="h-16 w-16 opacity-90" />
               )}
@@ -697,14 +705,14 @@ function Team() {
                 <div className="h-4 w-24 mx-auto rounded bg-[color:var(--gold)]/15" />
               )}
             </div>
-            <div className="mt-2 text-xs uppercase tracking-widest text-[color:var(--saffron)]">{r}</div>
+            <div className="mt-2 text-xs uppercase tracking-widest text-[color:var(--saffron)]">Organiser</div>
           </div>
-          );
-        })}
+        ))}
       </div>
     </Section>
   );
 }
+
 
 function ShareMemories() {
   return (
