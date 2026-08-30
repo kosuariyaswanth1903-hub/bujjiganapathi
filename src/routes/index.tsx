@@ -673,9 +673,9 @@ function Donation() {
 }
 
 function Team() {
-  const roles = ["President", "Vice President", "Secretary", "Treasurer", "Cultural Head", "Coordinator", "Coordinator", "Coordinator"];
+  const roles = ["Organiser", "Organiser", "Organiser", "Organiser", "Organiser", "Organiser", "Organiser", "Organiser"];
   return (
-    <Section eyebrow="Meet Our Team" title="The Devoted Volunteers" subtitle="Our dedicated volunteers work together with devotion and unity to make this celebration memorable.">
+    <Section eyebrow="Meet Our Team" title="Our Organisers" subtitle="Our dedicated organisers work together with devotion and unity to make this celebration memorable.">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {roles.map((r, i) => (
           <div key={i} className="glass group rounded-2xl p-6 text-center transition hover:-translate-y-1">
