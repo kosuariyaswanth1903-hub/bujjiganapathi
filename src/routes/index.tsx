@@ -678,20 +678,29 @@ function Team() {
   return (
     <Section eyebrow="Meet Our Team" title="Our Organisers" subtitle="Our dedicated organisers work together with devotion and unity to make this celebration memorable.">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {roles.map((r, i) => (
+        {roles.map((r, i) => {
+          const name = i === 2 ? "Bharath Sai" : "";
+          return (
           <div key={i} className="glass group rounded-2xl p-6 text-center transition hover:-translate-y-1">
             <div className="relative mx-auto grid h-24 w-24 place-items-center overflow-hidden rounded-full ring-2 ring-[color:var(--gold)]/40" style={{ background: "var(--gradient-royal)" }}>
               {i === 2 ? (
-                <img src={organiser3.url} alt="Organiser portrait" className="h-24 w-24 rounded-full object-cover" />
+                <img src={organiser3.url} alt="Bharath Sai" className="h-24 w-24 rounded-full object-cover object-top" />
               ) : (
                 <img src={LOGO} alt="" className="h-16 w-16 opacity-90" />
               )}
               <div className="absolute inset-0 rounded-full opacity-0 transition group-hover:opacity-100 group-hover:animate-glow" />
             </div>
-            <div className="mt-4 h-4 w-24 mx-auto rounded bg-[color:var(--gold)]/15" />
+            <div className="mt-4">
+              {name ? (
+                <div className="text-sm font-medium text-[color:var(--ivory)]">{name}</div>
+              ) : (
+                <div className="h-4 w-24 mx-auto rounded bg-[color:var(--gold)]/15" />
+              )}
+            </div>
             <div className="mt-2 text-xs uppercase tracking-widest text-[color:var(--saffron)]">{r}</div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </Section>
   );
