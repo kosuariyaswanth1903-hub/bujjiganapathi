@@ -218,7 +218,7 @@ function Nav({ theme, setTheme, muted, setMuted }: {
 /* -------------------------------- Ticker -------------------------------- */
 function Ticker() {
   const items = [
-    "📍 Opposite Bhimadole Bus Stand, near the central junction",
+    "📍 Golusula Gate Road, Bhimadole",
     "🪔 Maha Aarti daily at 7:30 PM",
     "🙏 Free Prasadam served after every aarti",
     "🎶 Bhajan night — Saturday 8:00 PM",
@@ -561,7 +561,7 @@ function Visit() {
         <div className="space-y-4">
           {[
             ["📍 Address", "R758+VFJ, Bhimadole, Andhra Pradesh 534425"],
-            ["🚗 Landmark", "Opposite Bhimadole Bus Stand, near the central junction"],
+            ["🚗 Landmark", "Golusula Gate Road, Bhimadole"],
             ["🅿️ Parking", "Free two-wheeler and car parking available adjacent to the pandal"],
             ["🕰️ Timings", "Darshan 6:00 AM – 10:30 PM · Maha Aarti at 7:30 PM daily"],
           ].map(([t, b]) => (
