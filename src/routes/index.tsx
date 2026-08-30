@@ -712,8 +712,7 @@ function Team() {
     </Section>
   );
 }
-  );
-}
+
 
 function ShareMemories() {
   return (
