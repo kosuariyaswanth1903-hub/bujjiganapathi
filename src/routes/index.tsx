@@ -14,6 +14,7 @@ import bujji3 from "@/assets/bujji-3.png.asset.json";
 import bujji4 from "@/assets/bujji-4.png.asset.json";
 import bujji5 from "@/assets/bujji-5.png.asset.json";
 import bujji6 from "@/assets/bujji-6.png.asset.json";
+import organiser3 from "@/assets/organiser-3.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -680,7 +681,11 @@ function Team() {
         {roles.map((r, i) => (
           <div key={i} className="glass group rounded-2xl p-6 text-center transition hover:-translate-y-1">
             <div className="relative mx-auto grid h-24 w-24 place-items-center overflow-hidden rounded-full ring-2 ring-[color:var(--gold)]/40" style={{ background: "var(--gradient-royal)" }}>
-              <img src={LOGO} alt="" className="h-16 w-16 opacity-90" />
+              {i === 2 ? (
+                <img src={organiser3.url} alt="Organiser portrait" className="h-24 w-24 rounded-full object-cover" />
+              ) : (
+                <img src={LOGO} alt="" className="h-16 w-16 opacity-90" />
+              )}
               <div className="absolute inset-0 rounded-full opacity-0 transition group-hover:opacity-100 group-hover:animate-glow" />
             </div>
             <div className="mt-4 h-4 w-24 mx-auto rounded bg-[color:var(--gold)]/15" />
