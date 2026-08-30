@@ -218,6 +218,7 @@ function Nav({ theme, setTheme, muted, setMuted }: {
 /* -------------------------------- Ticker -------------------------------- */
 function Ticker() {
   const items = [
+    "📍 Opposite Bhimadole Bus Stand, near the central junction",
     "🪔 Maha Aarti daily at 7:30 PM",
     "🙏 Free Prasadam served after every aarti",
     "🎶 Bhajan night — Saturday 8:00 PM",
