@@ -16,6 +16,7 @@ import bujji5 from "@/assets/bujji-5.png.asset.json";
 import bujji6 from "@/assets/bujji-6.png.asset.json";
 import organiser1 from "@/assets/organiser-1.png.asset.json";
 import organiser3 from "@/assets/organiser-3.png.asset.json";
+import organiser8 from "@/assets/organiser-8.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -683,7 +684,7 @@ function Team() {
     { name: "", photo: null },
     { name: "", photo: null },
     { name: "", photo: null },
-    { name: "", photo: null },
+    { name: "Karthik", photo: organiser8.url },
   ];
   return (
     <Section eyebrow="Meet Our Team" title="Our Organisers" subtitle="Our dedicated organisers work together with devotion and unity to make this celebration memorable.">
