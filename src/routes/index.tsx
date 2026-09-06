@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  MapPin, Phone, MessageCircle, Instagram, Facebook, Mail,
+  MapPin, Phone, MessageCircle, Instagram,
   Sparkles, Flame, HandHeart, Utensils, Music, Drama, Users, Camera,
   ChevronUp, Sun, Moon, Volume2, VolumeX, X, Cloud, Bell, QrCode, Heart,
 } from "lucide-react";
@@ -717,10 +717,9 @@ function Team() {
 
 function ShareMemories() {
   return (
-    <Section eyebrow="Share Your Memories" title="#BujjiGanapathiYouth" subtitle="Tag us on Instagram and Facebook to be featured on our official page.">
+    <Section eyebrow="Share Your Memories" title="#BujjiGanapathiYouth" subtitle="Tag us on Instagram to be featured on our official page.">
       <div className="mx-auto flex max-w-2xl flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://instagram.com/bujji_ganapathi_" target="_blank" rel="noopener noreferrer" className="btn-outline-gold inline-flex items-center gap-2 rounded-full px-6 py-3"><Instagram className="h-5 w-5" /> @bujji_ganapathi_</a>
-        <a href="#" className="btn-outline-gold inline-flex items-center gap-2 rounded-full px-6 py-3"><Facebook className="h-5 w-5" /> Bujji Ganapathi Youth</a>
+        <a href="https://www.instagram.com/bujji_ganapathi_/" target="_blank" rel="noopener noreferrer" className="btn-outline-gold inline-flex items-center gap-2 rounded-full px-6 py-3"><Instagram className="h-5 w-5" /> @bujji_ganapathi_</a>
         <a href="#" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3"><Camera className="h-5 w-5" /> Upload Photo</a>
       </div>
     </Section>
@@ -729,17 +728,16 @@ function ShareMemories() {
 
 function Contact() {
   const items = [
-    { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
-    { icon: MessageCircle, label: "WhatsApp", value: "+91 98765 43210", href: "https://wa.me/919876543210" },
-    { icon: Instagram, label: "Instagram", value: "@bujji_ganapathi_", href: "https://instagram.com/bujji_ganapathi_" },
-    { icon: Facebook, label: "Facebook", value: "Bujji Ganapathi Youth", href: "#" },
-    { icon: Mail, label: "Email", value: "info@bujjiganapathi.org", href: "mailto:info@bujjiganapathi.org" },
+    { icon: Phone, label: "Phone", value: "+91 76748 65442", href: "tel:+917674865442" },
+    { icon: Phone, label: "Phone", value: "+91 81799 45591", href: "tel:+918179945591" },
+    { icon: MessageCircle, label: "WhatsApp", value: "+91 81799 45591", href: "https://wa.me/918179945591" },
+    { icon: Instagram, label: "Instagram", value: "@bujji_ganapathi_", href: "https://www.instagram.com/bujji_ganapathi_/" },
   ];
   return (
     <Section id="contact" eyebrow="Get in Touch" title="Contact the Committee" subtitle="We are here to help and welcome every devotee.">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map(({ icon: Icon, label, value, href }) => (
-          <a key={label} href={href} className="glass group flex items-center gap-4 rounded-2xl p-5 transition hover:-translate-y-1 hover:shadow-[var(--glow-gold)]">
+        {items.map(({ icon: Icon, label, value, href }, idx) => (
+          <a key={idx} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="glass group flex items-center gap-4 rounded-2xl p-5 transition hover:-translate-y-1 hover:shadow-[var(--glow-gold)]">
             <div className="grid h-12 w-12 place-items-center rounded-xl bg-[color:var(--gold)]/10 text-[color:var(--gold)] group-hover:animate-glow">
               <Icon className="h-5 w-5" />
             </div>
@@ -751,7 +749,7 @@ function Contact() {
         ))}
       </div>
       <div className="mt-8 text-center">
-        <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold">
+        <a href="https://wa.me/918179945591" target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold">
           <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
         </a>
       </div>
@@ -786,9 +784,8 @@ function Footer() {
         <div>
           <div className="text-xs uppercase tracking-[0.3em] text-[color:var(--saffron)]">Follow</div>
           <div className="mt-4 flex gap-3">
-            <a href="https://instagram.com/bujji_ganapathi_" target="_blank" rel="noopener noreferrer" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><Instagram className="h-5 w-5"/></a>
-            <a href="#" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><Facebook className="h-5 w-5"/></a>
-            <a href="https://wa.me/919876543210" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><MessageCircle className="h-5 w-5"/></a>
+            <a href="https://www.instagram.com/bujji_ganapathi_/" target="_blank" rel="noopener noreferrer" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><Instagram className="h-5 w-5"/></a>
+            <a href="https://wa.me/918179945591" target="_blank" rel="noreferrer" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><MessageCircle className="h-5 w-5"/></a>
           </div>
         </div>
       </div>
@@ -822,7 +819,7 @@ function BackToTop() {
 function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/919876543210"
+      href="https://wa.me/918179945591"
       target="_blank" rel="noreferrer"
       aria-label="Chat on WhatsApp"
       className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-[0_10px_40px_rgba(37,211,102,0.5)] animate-glow"
