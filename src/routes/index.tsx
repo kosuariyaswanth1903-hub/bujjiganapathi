@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  MapPin, Phone, MessageCircle, Instagram, Facebook, Mail,
+  MapPin, Phone, MessageCircle, Instagram,
   Sparkles, Flame, HandHeart, Utensils, Music, Drama, Users, Camera,
   ChevronUp, Sun, Moon, Volume2, VolumeX, X, Cloud, Bell, QrCode, Heart,
 } from "lucide-react";
