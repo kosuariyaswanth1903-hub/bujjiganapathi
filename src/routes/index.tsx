@@ -688,7 +688,7 @@ function Team() {
   ];
   return (
     <Section eyebrow="Meet Our Team" title="Our Organisers" subtitle="Our dedicated organisers work together with devotion and unity to make this celebration memorable.">
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
         {members.map(({ name, photo }, i) => (
           <div key={i} className="glass group rounded-2xl p-6 text-center transition hover:-translate-y-1">
             <div className="relative mx-auto grid h-24 w-24 place-items-center overflow-hidden rounded-full ring-2 ring-[color:var(--gold)]/40" style={{ background: "var(--gradient-royal)" }}>
@@ -719,7 +719,7 @@ function ShareMemories() {
   return (
     <Section eyebrow="Share Your Memories" title="#BujjiGanapathiYouth" subtitle="Tag us on Instagram and Facebook to be featured on our official page.">
       <div className="mx-auto flex max-w-2xl flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#" className="btn-outline-gold inline-flex items-center gap-2 rounded-full px-6 py-3"><Instagram className="h-5 w-5" /> @bujjiganapathi</a>
+        <a href="https://instagram.com/bujji_ganapathi_" target="_blank" rel="noopener noreferrer" className="btn-outline-gold inline-flex items-center gap-2 rounded-full px-6 py-3"><Instagram className="h-5 w-5" /> @bujji_ganapathi_</a>
         <a href="#" className="btn-outline-gold inline-flex items-center gap-2 rounded-full px-6 py-3"><Facebook className="h-5 w-5" /> Bujji Ganapathi Youth</a>
         <a href="#" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3"><Camera className="h-5 w-5" /> Upload Photo</a>
       </div>
@@ -731,7 +731,7 @@ function Contact() {
   const items = [
     { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
     { icon: MessageCircle, label: "WhatsApp", value: "+91 98765 43210", href: "https://wa.me/919876543210" },
-    { icon: Instagram, label: "Instagram", value: "@bujjiganapathi", href: "#" },
+    { icon: Instagram, label: "Instagram", value: "@bujji_ganapathi_", href: "https://instagram.com/bujji_ganapathi_" },
     { icon: Facebook, label: "Facebook", value: "Bujji Ganapathi Youth", href: "#" },
     { icon: Mail, label: "Email", value: "info@bujjiganapathi.org", href: "mailto:info@bujjiganapathi.org" },
   ];
@@ -786,7 +786,7 @@ function Footer() {
         <div>
           <div className="text-xs uppercase tracking-[0.3em] text-[color:var(--saffron)]">Follow</div>
           <div className="mt-4 flex gap-3">
-            <a href="#" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><Instagram className="h-5 w-5"/></a>
+            <a href="https://instagram.com/bujji_ganapathi_" target="_blank" rel="noopener noreferrer" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><Instagram className="h-5 w-5"/></a>
             <a href="#" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><Facebook className="h-5 w-5"/></a>
             <a href="https://wa.me/919876543210" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><MessageCircle className="h-5 w-5"/></a>
           </div>
