@@ -731,7 +731,7 @@ function Contact() {
   const items = [
     { icon: Phone, label: "Phone", value: "+91 76748 65442", href: "tel:+917674865442" },
     { icon: Phone, label: "Phone", value: "+91 81799 45591", href: "tel:+918179945591" },
-    { icon: MessageCircle, label: "WhatsApp", value: "+91 81799 45591", href: "https://wa.me/918179945591" },
+    { icon: MessageCircle, label: "WhatsApp", value: "+91 76748 65442", href: "https://wa.me/917674865442" },
     { icon: Instagram, label: "Instagram", value: "@bujji_ganapathi_", href: "https://www.instagram.com/bujji_ganapathi_/" },
   ];
   return (
@@ -750,7 +750,7 @@ function Contact() {
         ))}
       </div>
       <div className="mt-8 text-center">
-        <a href="https://wa.me/918179945591" target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold">
+        <a href="https://wa.me/917674865442" target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold">
           <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
         </a>
       </div>
@@ -786,7 +786,7 @@ function Footer() {
           <div className="text-xs uppercase tracking-[0.3em] text-[color:var(--saffron)]">Follow</div>
           <div className="mt-4 flex gap-3">
             <a href="https://www.instagram.com/bujji_ganapathi_/" target="_blank" rel="noopener noreferrer" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><Instagram className="h-5 w-5"/></a>
-            <a href="https://wa.me/918179945591" target="_blank" rel="noreferrer" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><MessageCircle className="h-5 w-5"/></a>
+            <a href="https://wa.me/917674865442" target="_blank" rel="noreferrer" className="glass grid h-11 w-11 place-items-center rounded-full text-[color:var(--gold)]"><MessageCircle className="h-5 w-5"/></a>
           </div>
         </div>
       </div>
@@ -820,7 +820,7 @@ function BackToTop() {
 function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/918179945591"
+      href="https://wa.me/917674865442"
       target="_blank" rel="noreferrer"
       aria-label="Chat on WhatsApp"
       className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-[0_10px_40px_rgba(37,211,102,0.5)] animate-glow"
