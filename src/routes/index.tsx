@@ -17,6 +17,7 @@ import bujji6 from "@/assets/bujji-6.png.asset.json";
 import organiser1 from "@/assets/organiser-1.png.asset.json";
 import organiser3 from "@/assets/organiser-3.png.asset.json";
 import organiser8 from "@/assets/organiser-8.png.asset.json";
+import musicAsset from "@/assets/festival-music.mp3.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -859,6 +860,27 @@ function Home() {
     return () => clearTimeout(t);
   }, []);
 
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.loop = true;
+    audio.volume = 0.5;
+    if (muted) {
+      audio.pause();
+    } else {
+      audio.play().catch(() => setMuted(true));
+    }
+  }, [muted]);
+
+  // Browsers block autoplay with sound — start music on the first tap/click anywhere.
+  useEffect(() => {
+    const start = () => setMuted(false);
+    window.addEventListener("pointerdown", start, { once: true });
+    return () => window.removeEventListener("pointerdown", start);
+  }, []);
+
   return (
     <div className="relative min-h-screen">
       <Loader done={loaded} />
@@ -887,6 +909,7 @@ function Home() {
       <Footer />
       <BackToTop />
       <WhatsAppFloat />
+      <audio ref={audioRef} src={musicAsset.url} preload="auto" />
     </div>
   );
 }
