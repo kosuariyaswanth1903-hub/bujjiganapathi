@@ -846,7 +846,7 @@ function Loader({ done }: { done: boolean }) {
 function Home() {
   useReveal();
   const [theme, setTheme] = useState<"dark" | "light">("dark");
-  const [muted, setMuted] = useState(true);
+  const [muted, setMuted] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -870,13 +870,19 @@ function Home() {
     if (muted) {
       audio.pause();
     } else {
-      audio.play().catch(() => setMuted(true));
+      // Browsers block autoplay with sound until the user interacts —
+      // try to play; if blocked, it will start on the first tap below.
+      audio.play().catch(() => {});
     }
   }, [muted]);
 
   // Browsers block autoplay with sound — start music on the first tap/click anywhere.
   useEffect(() => {
-    const start = () => setMuted(false);
+    const start = () => {
+      const audio = audioRef.current;
+      if (audio && !audio.paused) return;
+      audio?.play().catch(() => {});
+    };
     window.addEventListener("pointerdown", start, { once: true });
     return () => window.removeEventListener("pointerdown", start);
   }, []);
