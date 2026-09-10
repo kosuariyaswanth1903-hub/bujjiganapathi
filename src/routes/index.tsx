@@ -18,6 +18,7 @@ import organiser1 from "@/assets/organiser-1.png.asset.json";
 import organiser2 from "@/assets/organiser-2.png.asset.json";
 import organiser3 from "@/assets/organiser-3.png.asset.json";
 import organiser4 from "@/assets/organiser-4.png.asset.json";
+import organiser5 from "@/assets/organiser-5.png.asset.json";
 import organiser8 from "@/assets/organiser-8.png.asset.json";
 import musicAsset from "@/assets/festival-music.mp3.asset.json";
 
@@ -684,7 +685,7 @@ function Team() {
     { name: "", photo: organiser2.url },
     { name: "Bharath Sai", photo: organiser3.url },
     { name: "Santhosh", photo: organiser4.url },
-    { name: "", photo: null },
+    { name: "Jaswant", photo: organiser5.url },
     { name: "", photo: null },
     { name: "", photo: null },
     { name: "Karthik", photo: organiser8.url },
