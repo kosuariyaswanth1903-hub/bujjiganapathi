@@ -19,6 +19,7 @@ import organiser2 from "@/assets/organiser-2.png.asset.json";
 import organiser3 from "@/assets/organiser-3.png.asset.json";
 import organiser4 from "@/assets/organiser-4.png.asset.json";
 import organiser5 from "@/assets/organiser-5.png.asset.json";
+import organiser6 from "@/assets/organiser-6.png.asset.json";
 import organiser8 from "@/assets/organiser-8.png.asset.json";
 import musicAsset from "@/assets/festival-music.mp3.asset.json";
 
