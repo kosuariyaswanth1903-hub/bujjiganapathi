@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   MapPin, Phone, MessageCircle, Instagram,
   Sparkles, Flame, HandHeart, Utensils, Music, Drama, Users, Camera,
-  ChevronUp, Sun, Moon, Volume2, VolumeX, X, Cloud, Bell, QrCode, Heart,
+  ChevronUp, Sun, Moon, Volume2, VolumeX, X, Cloud, Bell, Heart,
 } from "lucide-react";
 import logoAsset from "@/assets/logo.webp.asset.json";
 import processionAsset from "@/assets/procession.jpg.asset.json";
