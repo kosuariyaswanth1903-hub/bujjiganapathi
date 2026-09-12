@@ -687,7 +687,7 @@ function Team() {
     { name: "Bharath Sai", photo: organiser3.url },
     { name: "Santhosh", photo: organiser4.url },
     { name: "Jaswanth", photo: organiser5.url },
-    { name: "", photo: null },
+    { name: "Chintu", photo: organiser6.url },
     { name: "", photo: null },
     { name: "Karthik", photo: organiser8.url },
   ];
