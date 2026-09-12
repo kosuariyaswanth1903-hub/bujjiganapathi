@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import logoAsset from "@/assets/logo.webp.asset.json";
 import processionAsset from "@/assets/procession.jpg.asset.json";
+import donationQr from "@/assets/donation-qr.jpg.asset.json";
 import heroImg from "@/assets/hero-ganesh.jpg";
 import bujji1 from "@/assets/bujji-1.png.asset.json";
 import bujji2 from "@/assets/bujji-2.png.asset.json";
@@ -653,8 +654,8 @@ function Donation() {
           <div className="rounded-[calc(1.5rem-4px)] bg-[color:var(--card)]/80 p-8 sm:p-10 backdrop-blur">
             <div className="grid gap-8 sm:grid-cols-2 items-center">
               <div className="text-center">
-                <div className="mx-auto grid h-48 w-48 place-items-center rounded-2xl bg-[color:var(--ivory)] text-[color:var(--maroon)]">
-                  <QrCode className="h-32 w-32" />
+                <div className="mx-auto h-48 w-48 overflow-hidden rounded-2xl bg-[color:var(--ivory)] gold-border">
+                  <img src={donationQr.url} alt="UPI QR code to donate to Bujji Ganapathi Youth" className="h-full w-full object-cover" />
                 </div>
                 <div className="mt-3 text-xs text-muted-foreground">Scan UPI QR to donate</div>
               </div>
@@ -668,9 +669,17 @@ function Donation() {
                   <div className="text-xs uppercase tracking-widest text-muted-foreground">UPI ID</div>
                   <div className="mt-1 font-mono text-[color:var(--gold-soft)]">bujjiganapathi@upi</div>
                 </div>
-                <a href="#" className="btn-gold mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold">
-                  <Heart className="h-5 w-5" /> Donate Now
+                <a
+                  href="https://wa.me/917674865442?text=Namaste!%20I%20just%20made%20a%20donation%20to%20Bujji%20Ganapathi%20Youth.%20My%20name%20is%20...%20and%20I%20donated%20Rs.%20..."
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-gold mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold"
+                >
+                  <Heart className="h-5 w-5" /> I Donated — Notify on WhatsApp
                 </a>
+                <p className="mt-3 text-center text-xs text-muted-foreground">
+                  After paying, tap the button to send us your name and amount on WhatsApp.
+                </p>
               </div>
             </div>
           </div>
