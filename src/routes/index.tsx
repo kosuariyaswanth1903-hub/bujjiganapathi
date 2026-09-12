@@ -667,16 +667,16 @@ function Donation() {
                 </p>
                 <div className="mt-5 glass rounded-xl p-4">
                   <div className="text-xs uppercase tracking-widest text-muted-foreground">UPI ID</div>
-                  <div className="mt-1 font-mono text-[color:var(--gold-soft)]">bujjiganapathi@upi</div>
+                  <div className="mt-1 font-mono text-[color:var(--gold-soft)]">6305114228@fam</div>
                 </div>
                 <a
-                  href="upi://pay?pa=bujjiganapathi@upi&pn=Bujji%20Ganapathi%20Youth&cu=INR"
+                  href="upi://pay?pa=6305114228@fam&pn=Bujji%20Ganapathi%20Youth&cu=INR"
                   className="btn-gold mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold"
                 >
                   <Heart className="h-5 w-5" /> Donate Now
                 </a>
                 <p className="mt-2 text-center text-xs text-muted-foreground">
-                  Opens the UPI app on your phone to pay <span className="font-mono text-[color:var(--gold-soft)]">bujjiganapathi@upi</span>.
+                  Opens the UPI app on your phone to pay <span className="font-mono text-[color:var(--gold-soft)]">6305114228@fam</span>.
                 </p>
                 <a
                   href="https://wa.me/917674865442?text=Namaste!%20I%20just%20made%20a%20donation%20to%20Bujji%20Ganapathi%20Youth.%20My%20name%20is%20...%20and%20I%20donated%20Rs.%20..."
