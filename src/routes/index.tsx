@@ -718,7 +718,7 @@ function Donation() {
 function Team() {
   const members = [
     { name: "Yaswanth", photo: organiser1.url },
-    { name: "", photo: organiser2.url },
+    { name: "Vamsi", photo: organiser2.url },
     { name: "Bharath Sai", photo: organiser3.url },
     { name: "Santhosh", photo: organiser4.url },
     { name: "Jaswanth", photo: organiser5.url },
