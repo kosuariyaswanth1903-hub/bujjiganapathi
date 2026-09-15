@@ -23,6 +23,7 @@ import organiser5 from "@/assets/organiser-5.png.asset.json";
 import organiser6 from "@/assets/organiser-6.png.asset.json";
 import organiser8 from "@/assets/organiser-8.png.asset.json";
 import musicAsset from "@/assets/festival-music.mp3.asset.json";
+import irumudiPoster from "@/assets/irumudi-poster.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -470,7 +471,8 @@ function Timeline() {
     { d: "Sep 18", t: "7:00 PM", title: "Cultural Night", body: "Classical dance and drama performances by local artists." },
     { d: "Sep 20", t: "12:00 PM", title: "Annadanam", body: "Grand community feast — all devotees warmly welcomed." },
     { d: "Sep 22", t: "6:00 PM", title: "Children's Program", body: "Games, storytelling and cultural activities for kids." },
-    { d: "Sep 22", t: "8:00 PM", title: "Movie Night", body: "Community movie screening for all devotees — bring your family and enjoy!" },
+    { d: "Sep 22", t: "8:00 PM", title: "Movie Night — IRUMUDI", body: "Special community screening of the film IRUMUDI for all devotees — bring your family and enjoy!", highlight: true, poster: irumudiPoster.url },
+    { d: "Sep 22", t: "9:30 PM", title: "Laddu Lucky Draw Winner", body: "The lucky winner of the Laddu Lucky Draw will be announced live after the movie — don't miss it!" },
     { d: "Sep 23, 2026", t: "9:00 PM", title: "Grand Visarjan", body: "Vibrant farewell procession — Ganapati Bappa Morya!" },
   ];
   return (
