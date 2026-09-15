@@ -23,6 +23,7 @@ import organiser5 from "@/assets/organiser-5.png.asset.json";
 import organiser6 from "@/assets/organiser-6.png.asset.json";
 import organiser8 from "@/assets/organiser-8.png.asset.json";
 import musicAsset from "@/assets/festival-music.mp3.asset.json";
+import irumudiPoster from "@/assets/irumudi-poster.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
