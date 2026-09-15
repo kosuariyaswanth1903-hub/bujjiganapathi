@@ -647,7 +647,10 @@ function Weather() {
 }
 
 function Blessing() {
-  const [q] = useState(() => BLESSINGS[Math.floor(Math.random() * BLESSINGS.length)]);
+  const [q, setQ] = useState(BLESSINGS[0]);
+  useEffect(() => {
+    setQ(BLESSINGS[Math.floor(Math.random() * BLESSINGS.length)]);
+  }, []);
   return (
     <div className="glass relative mx-auto max-w-2xl overflow-hidden rounded-3xl p-8 text-center">
       <div className="pointer-events-none absolute -inset-1 opacity-30" style={{ background: "radial-gradient(circle at 50% 0%, var(--gold) 0%, transparent 60%)" }} />
