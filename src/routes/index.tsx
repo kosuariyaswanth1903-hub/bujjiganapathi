@@ -88,11 +88,11 @@ function Petals({ count = 18 }: { count?: number }) {
   const petals = useMemo(
     () =>
       Array.from({ length: count }).map((_, i) => ({
-        left: Math.random() * 100,
-        delay: Math.random() * 12,
-        dur: 10 + Math.random() * 14,
-        size: 10 + Math.random() * 18,
-        hue: Math.random() > 0.5 ? "#FF9933" : "#D4AF37",
+        left: (i * 37.7 + 11) % 100,
+        delay: (i * 2.3) % 12,
+        dur: 10 + ((i * 4.7) % 14),
+        size: 10 + ((i * 7.1) % 18),
+        hue: i % 2 === 0 ? "#FF9933" : "#D4AF37",
         key: i,
       })),
     [count]
@@ -124,11 +124,11 @@ function GoldenParticles({ count = 30 }: { count?: number }) {
   const parts = useMemo(
     () =>
       Array.from({ length: count }).map((_, i) => ({
-        left: Math.random() * 100,
-        bottom: -Math.random() * 40,
-        delay: Math.random() * 10,
-        dur: 8 + Math.random() * 10,
-        size: 2 + Math.random() * 4,
+        left: (i * 41.3 + 7) % 100,
+        bottom: -((i * 9.7) % 40),
+        delay: (i * 1.9) % 10,
+        dur: 8 + ((i * 3.1) % 10),
+        size: 2 + ((i * 1.7) % 4),
         key: i,
       })),
     [count]
@@ -251,12 +251,18 @@ function Ticker() {
 /* -------------------------------- Hero ---------------------------------- */
 function Hero() {
   const [offset, setOffset] = useState(0);
+  const [showCelebration, setShowCelebration] = useState(true);
   useEffect(() => {
     const onScroll = () => setOffset(window.scrollY * 0.25);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   const c = useCountdown(TARGET_DATE);
+  useEffect(() => {
+    if (!c.done || !showCelebration) return;
+    const timer = window.setTimeout(() => setShowCelebration(false), 2500);
+    return () => window.clearTimeout(timer);
+  }, [c.done, showCelebration]);
   return (
     <section id="top" className="relative min-h-[100svh] w-full overflow-hidden">
       <div className="absolute inset-0" style={{ transform: `translateY(${offset}px) scale(1.08)` }}>
@@ -314,19 +320,27 @@ function Hero() {
           </a>
         </div>
 
-        {c.done && <Celebration />}
+        {c.done && showCelebration && <Celebration onClose={() => setShowCelebration(false)} />}
       </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background" />
     </section>
   );
 }
 
-function Celebration() {
+function Celebration({ onClose }: { onClose: () => void }) {
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-md">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-md" role="dialog" aria-label="Festival greeting">
       <Petals count={80} />
       <GoldenParticles count={120} />
-      <div className="glass mx-4 rounded-3xl px-8 py-10 text-center">
+      <div className="glass relative mx-4 rounded-3xl px-8 py-10 text-center">
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close greeting"
+          className="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full text-muted-foreground transition hover:bg-[color:var(--gold)]/10 hover:text-[color:var(--gold)]"
+        >
+          <X className="h-5 w-5" />
+        </button>
         <img src={LOGO} alt="" className="mx-auto h-24 w-24 animate-glow rounded-full" />
         <h2 className="mt-4 font-serif text-4xl sm:text-6xl gold-text">🙏 Happy Ganesh Chaturthi</h2>
         <p className="mt-3 text-muted-foreground">Ganapati Bappa Morya!</p>
